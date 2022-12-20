@@ -1,0 +1,44 @@
+
+server:
+  port: 8091
+
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: soil
+  cloud:
+    compatibility-verifier:
+      enabled: false
+
+enableCache: true
+
+
+
+cache-ttls:
+  booking: 30
+
+redis-config:
+  setmax-size: 50
+  eviction-type: LRU
+
+model:
+  booking: com.demo.redis.patterns.entity.BookingModel
+  serviceplan: com.demo.redis.patterns.entity.ServicePlan
+
+
+
+
+
+logging:
+  level:
+    org.springframework.data.r2dbc: DEBUG
+  pattern:
+    level: "[%thread] [%X{correlationId}] %-5level %logger{36} - %msg%n"
+
+
+redis:
+  ssl: true
+  host: redis-telikos-poc.redis.cache.windows.net
+  port: 6380
+  password: Vo3jLiRNk5RQgjuPas1S11CJfITx34SfFAzCaIdsdJ8=
