@@ -1,8 +1,6 @@
 package com.demo.redis.patterns.util;
 
-import com.demo.redis.patterns.dto.ProductDto;
 import com.demo.redis.patterns.entity.BookingModel;
-import com.demo.redis.patterns.entity.ServicePlan;
 import com.maersk.telikos.model.Booking;
 
 public class EntityDtoUtil {
